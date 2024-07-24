@@ -7,9 +7,8 @@ RUN mvn verify
 COPY . .
 RUN mvn verify
 
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install openjdk-8-jre -y
+FROM alpine
+RUN apk add openjdk8-jre
 COPY --from=0 /app/target /app/target
 
 WORKDIR /app/target
