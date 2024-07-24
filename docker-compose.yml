@@ -4,7 +4,7 @@ services:
   web:
     build: web
     ports:
-      - 80
+      - $PORT:80
   db:
     build: db
   words:
