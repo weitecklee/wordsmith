@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  web:
+    build: web
+    ports:
+      - 80
+  db:
+    build: db
+  words:
+    build: words
+# docker-compose up -d --build --scale words=7
